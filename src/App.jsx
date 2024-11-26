@@ -1,6 +1,14 @@
+import Home from "./components/Home.jsx";
+import About from "./components/About.jsx";
+import Content from "./components/Content.jsx";
+
 function App() {
   return (
-    <h1 className="text-3xl text-center font-bold underline">Hello world!</h1>
+    <div>
+      <Home />
+      <Content />
+      <About />
+    </div>
   );
 }
 
