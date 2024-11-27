@@ -1,4 +1,3 @@
-import { Link as LinkRoute } from "react-router-dom";
 import Budaya from "../assets/Budaya.jpeg";
 import NilaiLuhur from "../assets/NilaiLuhur.jpeg";
 import LinkButton from "../components/LinkButton";
