@@ -27,13 +27,9 @@ const Navbar = () => {
       id: 5,
       title: "Contact Us",
     },
-    // {
-    //   id: 6,
-    //   title: "Admin Login",
-    // },
   ];
   return (
-    <div className="bg-black/50 backdrop-blur fixed top-0 left-0 h-16 w-full text-slate-200 flex items-center justify-between px-8 md:px-16 z-30">
+    <div className="bg-black/50 backdrop-blur fixed top-0 left-0 h-14 w-full text-slate-200 flex items-center justify-between px-8 md:px-16 z-30">
       <LinkRoute
         to="/"
         className="font-raleway text-xl transition-all duration-200 cursor-pointer hover:tracking-wider hover:font-semibold"

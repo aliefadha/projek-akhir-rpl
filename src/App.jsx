@@ -1,10 +1,10 @@
-import Home from "./components/Home.jsx";
-import About from "./components/About.jsx";
-import Content from "./components/Content.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Content from "./pages/Content.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="bg-slate-200">
       <Home />
       <Content />
       <About />

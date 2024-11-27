@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import { FaArrowDown } from "react-icons/fa6";
 import { Link as LinkScroll } from "react-scroll";
 
