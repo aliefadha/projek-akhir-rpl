@@ -5,7 +5,7 @@ import LinkButton from "../components/LinkButton";
 const Content = () => {
   return (
     <div
-      className="grid grid-cols-12 min-h-screen py-16 px-4 gap-4"
+      className="grid grid-cols-12 min-h-screen pt-16 pb-4 px-4 gap-4"
       name="content"
     >
       <div className="col-span-12 rounded-lg p-4 bg-slate-300 md:col-span-6 md:relative md:h-[550px]">

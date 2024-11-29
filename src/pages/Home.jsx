@@ -17,7 +17,7 @@ const Home = () => {
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              allowFullScreen
               className="rounded-xl flex-1 aspect-video w-80"
             ></iframe>
             <div className="text-slate-200 flex-1">

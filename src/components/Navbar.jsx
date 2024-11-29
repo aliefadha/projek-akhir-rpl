@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link as LinkScroll } from "react-scroll";
 import { Link as LinkRoute } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,22 +9,32 @@ const Navbar = () => {
     {
       id: 1,
       title: "Home",
+      path: "/",
     },
     {
       id: 2,
       title: "Who We Are",
+      path: "/team",
     },
     {
       id: 3,
       title: "Budaya",
+      path: "/budaya",
     },
     {
       id: 4,
       title: "Nilai Luhur",
+      path: "/nilai-luhur",
     },
     {
       id: 5,
       title: "Contact Us",
+      path: "/contact-us",
+    },
+    {
+      id: 6,
+      title: "Admin Login",
+      path: "/login",
     },
   ];
   return (
@@ -37,22 +46,20 @@ const Navbar = () => {
         Lentera Minang
       </LinkRoute>
       <div className="items-center hidden gap-4 md:flex">
-        {navLink.map(({ id, title }) => (
+        {navLink.map(({ id, title, path }) => (
           <p
             className="transition-all duration-200 cursor-pointer hover:tracking-wide hover:font-semibold"
             key={id}
           >
-            <LinkScroll to={title} smooth duration={500}>
-              {title}
-            </LinkScroll>
+            <LinkRoute to={path}>{title}</LinkRoute>
           </p>
         ))}
-        <LinkRoute
+        {/* <LinkRoute
           to="/Login"
           className="transition-all duration-200 cursor-pointer hover:tracking-wide hover:font-semibold"
         >
           Admin Login
-        </LinkRoute>
+        </LinkRoute> */}
       </div>
 
       <div
@@ -75,26 +82,16 @@ const Navbar = () => {
             exit={{ x: "-100%", opacity: 0 }}
             className="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen gap-2 py-5 text-xl text-center rounded bg-slate-200/95 backdrop-blur text-gray-900"
           >
-            {navLink.map(({ id, title }) => (
+            {navLink.map(({ id, title, path }) => (
               <li
                 className="transition-all duration-200 hover:tracking-wide hover:font-semibold cursor-pointer"
                 key={id}
               >
                 <p>
-                  <LinkScroll to={title} smooth duration={500}>
-                    {title}
-                  </LinkScroll>
+                  <LinkRoute to={path}>{title}</LinkRoute>
                 </p>
               </li>
             ))}
-            <li>
-              <LinkRoute
-                to="/Login"
-                className="transition-all duration-200 cursor-pointer hover:tracking-wide hover:font-semibold"
-              >
-                Admin Login
-              </LinkRoute>
-            </li>
           </motion.ul>
         )}
       </AnimatePresence>
