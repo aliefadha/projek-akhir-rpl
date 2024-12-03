@@ -14,7 +14,7 @@ const Content = () => {
           className="rounded-md my-2 aspect-video"
           loading="lazy"
         />
-        <p>
+        <p className="mb-4">
           Kebudayaan merupakan penyelesaian manusia terhadap lingkungan
           hidupnya, serta usaha untuk mempertahankan kelangsungan hidupnya
           sesuai dengan keadaan (tradisi) yang terbaik.
@@ -31,7 +31,7 @@ const Content = () => {
           className="rounded-md my-2 aspect-video"
           loading="lazy"
         />
-        <p>
+        <p className="mb-4">
           Keyakinan seseorang yang mendorongnya untuk berperilaku dan bersikap
           sesuai dengan standar atau pegangan tertentu.
         </p>

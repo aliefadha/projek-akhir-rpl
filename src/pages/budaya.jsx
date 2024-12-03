@@ -33,7 +33,7 @@ const Budaya = () => {
                 </div>
                 <div>
                   <h2 className="font-bold text-2xl">{nama}</h2>
-                  <p>{deskripsi.substring(0, 100)}...</p>
+                  <p>{deskripsi.substring(0, 125)}...</p>
                 </div>
               </div>
               <LinkButton path={`/budaya/${id}`}>
