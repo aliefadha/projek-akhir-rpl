@@ -6,43 +6,43 @@ const Team = () => {
       id: 1,
       nama: "Habib Adli",
       background: "Project Manager",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 2,
       nama: "Asyifa Putri Romansha",
       background: "Architecture",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 3,
       nama: "Daud Kurniawan",
       background: "Designer",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 4,
       nama: "Rayhan Albani",
       background: "Designer",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 5,
       nama: "Alief Adha",
       background: "Web Developer",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 6,
       nama: "Fajar Rahyudi Putra",
       background: "Web Developer",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
     {
       id: 7,
       nama: "Muhammad Fajri",
       background: "Web Developer",
-      src: "./img/tes.jpg",
+      src: "./img/Tes.jpg",
     },
   ];
 
@@ -51,7 +51,7 @@ const Team = () => {
       <Navbar />
       <div className="min-h-screen pt-16 pb-4 px-4">
         <h1 className="font-bold text-xl mb-3 text-center">MEET OUR TEAM</h1>
-        <div className=" gap-4 grid grid-cols-12">
+        <div className="gap-4 grid grid-cols-12">
           {team.map(({ id, nama, background, src }) => (
             <article
               key={id}

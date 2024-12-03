@@ -1,5 +1,5 @@
-import Home from "./pages/Home.jsx";
-import Content from "./pages/Content.jsx";
+import Home from "./pages/home.jsx";
+import Content from "./pages/content.jsx";
 
 function App() {
   return (

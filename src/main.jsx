@@ -4,7 +4,9 @@ import "./index.css";
 import "./app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import Team from "./pages/Team.jsx";
+import Team from "./pages/team.jsx";
+import Budaya from "./pages/budaya.jsx";
+import DetailBudaya from "./pages/detailBudaya.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const routes = createBrowserRouter([
   {
     path: "/team",
     element: <Team />,
+  },
+  {
+    path: "/budayas",
+    element: <Budaya />,
+  },
+  {
+    path: "/budaya/:id",
+    element: <DetailBudaya />,
   },
 ]);
 

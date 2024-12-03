@@ -19,7 +19,7 @@ const Navbar = () => {
     {
       id: 3,
       title: "Budaya",
-      path: "/budaya",
+      path: "/budayas",
     },
     {
       id: 4,

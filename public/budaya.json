@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nama": "Randai",
+    "deskripsi": "Randai adalah salah satu permainan tradisional di Minangkabau yang dimainkan secara berkelompok dengan membentuk lingkaran, kemudian melangkahkan kaki secara perlahan, sambil menyampaikan cerita dalam bentuk nyanyian secara berganti-gantian. Randai menggabungkan seni lagu, musik, tari, drama dan silat menjadi satu. \n\nRandai dipimpin oleh satu orang yang biasa disebut panggoreh, yang mana selain ikut serta bergerak dalam legaran ia juga memiliki tugas yaitu mengeluarkan teriakan khas misalnya hep tah tih yang tujuannya untuk menentukan cepat atau lambatnya tempo gerakan seiring dengan dendang atau Gurindam. Tujuannya agar Randai yang dimainkan terlihat rempak dan seirama. Biasanya dalam satu group Randai memiliki satu panggoreh yang dipercayai oleh seluruh anggota tim, tetapi bisa digantikan oleh rekan tim lainya apabila panggoreh sebelumnya kelelahan, karena untuk menuntaskan satu cerita Randai saja bisa menghabiskan 1 hingga 5 jam bahkan lebih.",
+    "gambar": "/img/TariPiring.jpeg",
+    "src": "https://www.youtube.com/embed/GcWEC1xqx5o?si=Yx3-e5p8nIwh5mqC"
+  },
+  {
+    "id": 2,
+    "nama": "Tari Piring",
+    "deskripsi": "Tari piring adalah tarian tradisional Minangkabau yang berasal dari Sumatera Barat, Solok. Tarian ini menampilkan atraksi menggunakan piring. Para penari mengayunkan piring di tangan mengikuti gerakan-gerakan cepat yang teratur, tanpa satu pun piring terlepas dari tangan. Gerakannya diambil dari langkah dalam silat Minangkabau atau silek.\n\nTari ini dipopulerkan oleh Huriah Adam. Saat ini, tari piring dipertunjukkan untuk penyambutan tamu terhormat atau pembukaan upacara adat. Bersama dengan tari saman, pendet, dan jaipong, tari ini menjadi tarian populer Indonesia yang kerap ditampilkan di ajang promosi pariwisata dan kebudayaan Indonesia.",
+    "gambar": "/img/TariPiring.jpeg",
+    "src": "https://www.youtube.com/embed/1O_OYwnV6iw?si=vpVZWx3ChzX6TIp8"
+  },
+  {
+    "id": 3,
+    "nama": "Silek",
+    "deskripsi": "Silek adalah seni bela diri tradisional Minangkabau yang juga menginspirasi berbagai tarian dan drama. Silek tidak hanya berfungsi sebagai pertahanan diri tetapi juga sebagai seni yang ditampilkan dalam berbagai acara adat.",
+    "gambar": "/img/TariPiring.jpeg",
+    "src": "https://www.youtube.com/embed/8nlQ0-VFE48?si=GTCIXFxPbJH_fmLo"
+  },
+  {
+    "id": 4,
+    "nama": "Upacara Babako",
+    "deskripsi": "Upacara Babako adalah tradisi pra-pernikahan yang diselenggarakan oleh keluarga pihak ayah dari calon pengantin wanita. Upacara ini melambangkan kasih sayang keluarga ayah dan ditandai dengan pemberian antaran berupa barang keperluan calon pengantin.",
+    "gambar": "/img/TariPiring.jpeg",
+    "src": "https://www.youtube.com/embed/XEnyj8UrRFg?si=uAqIZTccMeHf8mbq"
+  },
+  {
+    "id": 5,
+    "nama": "Rumah Gadang",
+    "deskripsi": "Rumah Gadang adalah rumah adat Minangkabau dengan ciri khas atap melengkung seperti tanduk kerbau. Rumah ini berfungsi sebagai tempat tinggal keluarga besar sekaligus pusat kegiatan adat.",
+    "gambar": "/img/TariPiring.jpeg",
+    "src": "https://www.youtube.com/embed/EFS8vLgf090?si=tINrdAxCm9JoWsTT"
+  }
+]
