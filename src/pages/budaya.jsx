@@ -21,7 +21,7 @@ const Budaya = () => {
           {budaya.map(({ id, nama, deskripsi, gambar }) => (
             <article
               key={id}
-              className="col-span-12 md:col-span-4 p-6 bg-slate-200 rounded-xl"
+              className="col-span-12 md:col-span-4 p-6 bg-slate-200 rounded-xl md:relative md:h-[468px]"
             >
               <div className="flex items-center flex-col gap-4 mb-4">
                 <div className="aspect-video h-38 mb-2">
@@ -37,7 +37,10 @@ const Budaya = () => {
                   <p>{deskripsi.substring(0, 125)}...</p>
                 </div>
               </div>
-              <LinkButton path={`/budaya/${id}`}>
+              <LinkButton
+                path={`/budaya/${id}`}
+                variant="md:absolute md:bottom-2"
+              >
                 Pelajari Selengkapnya
               </LinkButton>
             </article>
