@@ -7,6 +7,8 @@ import App from "./App.jsx";
 import Team from "./pages/team.jsx";
 import Budaya from "./pages/budaya.jsx";
 import DetailBudaya from "./pages/detailBudaya.jsx";
+import NilaiLuhur from "./pages/nilai-luhur.jsx";
+import Login from "./pages/login.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const routes = createBrowserRouter([
   {
     path: "/budaya/:id",
     element: <DetailBudaya />,
+  },
+  {
+    path: "/nilai-luhur",
+    element: <NilaiLuhur />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 

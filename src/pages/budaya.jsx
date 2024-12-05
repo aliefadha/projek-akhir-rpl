@@ -29,6 +29,7 @@ const Budaya = () => {
                     src={gambar}
                     alt={nama}
                     className="w-full aspect-video object-center object-cover rounded-md"
+                    loading="lazy"
                   />
                 </div>
                 <div>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nama": "Habib Adli",
+    "background": "Project Manager",
+    "src": "./img/Habib.jpg"
+  },
+  {
+    "id": 2,
+    "nama": "Asyifa Putri Romansha",
+    "background": "Architecture",
+    "src": "./img/Asyifa.jpg"
+  },
+  {
+    "id": 3,
+    "nama": "Daud Kurniawan",
+    "background": "Designer",
+    "src": "./img/Daud.jpg"
+  },
+  {
+    "id": 4,
+    "nama": "Rayhan Albani",
+    "background": "Designer",
+    "src": "./img/Tes.jpg"
+  },
+  {
+    "id": 5,
+    "nama": "Alief Adha",
+    "background": "Web Developer",
+    "src": "./img/Tes.jpg"
+  },
+  {
+    "id": 6,
+    "nama": "Fajar Rahyudi Putra",
+    "background": "Web Developer",
+    "src": "./img/Fajar.jpg"
+  },
+  {
+    "id": 7,
+    "nama": "Muhammad Fajri",
+    "background": "Web Developer",
+    "src": "./img/Fajri.jpg"
+  }
+]

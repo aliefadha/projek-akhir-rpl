@@ -1,50 +1,15 @@
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 
 const Team = () => {
-  const team = [
-    {
-      id: 1,
-      nama: "Habib Adli",
-      background: "Project Manager",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 2,
-      nama: "Asyifa Putri Romansha",
-      background: "Architecture",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 3,
-      nama: "Daud Kurniawan",
-      background: "Designer",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 4,
-      nama: "Rayhan Albani",
-      background: "Designer",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 5,
-      nama: "Alief Adha",
-      background: "Web Developer",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 6,
-      nama: "Fajar Rahyudi Putra",
-      background: "Web Developer",
-      src: "./img/Tes.jpg",
-    },
-    {
-      id: 7,
-      nama: "Muhammad Fajri",
-      background: "Web Developer",
-      src: "./img/Tes.jpg",
-    },
-  ];
+  const [team, setTeam] = useState([]);
+
+  useEffect(() => {
+    fetch("/team.json")
+      .then((response) => response.json())
+      .then((data) => setTeam(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
 
   return (
     <div>
