@@ -9,6 +9,7 @@ import Budaya from "./pages/budaya.jsx";
 import DetailBudaya from "./pages/detailBudaya.jsx";
 import NilaiLuhur from "./pages/nilai-luhur.jsx";
 import Login from "./pages/login.jsx";
+import Contact from "./pages/contact-us.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const routes = createBrowserRouter([
   {
     path: "/nilai-luhur",
     element: <NilaiLuhur />,
+  },
+  {
+    path: "/contact-us",
+    element: <Contact />,
   },
   {
     path: "/login",
