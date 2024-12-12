@@ -1,8 +1,38 @@
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import loginData from "../login.json";
 import Button from "../components/Button";
-import Input from "../components/Input/Index";
+// import Input from "../components/Input/Index";
 import Navbar from "../components/Navbar";
+import Input from "../components/Input";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State untuk toggle password visibility
+  const [error, setError] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Validasi username dan password
+    if (username === loginData.username && password === loginData.password) {
+      alert("Login berhasil!");
+      // Redirect ke halaman dashboard admin
+      window.location.href = "/";
+      console.log("Input Username:", username);
+      console.log("Input Password:", password);
+      console.log("Expected Username:", loginData.username);
+      console.log("Expected Password:", loginData.password);
+    } else {
+      setError("Username atau password salah.");
+      console.log("Input Username:", username);
+      console.log("Input Password:", password);
+      console.log("Expected Username:", loginData.username);
+      console.log("Expected Password:", loginData.password);
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -14,26 +44,43 @@ const Login = () => {
               <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Login sebagai Admin
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form className="space-y-4 md:space-y-6" onSubmit={handleLogin}>
                 <Input
                   htmlfor="username"
                   type="text"
                   name="username"
                   id="username"
                   placeholder="Masukkan username anda"
+                  value={username} // Nilai diambil dari state
+                  onChange={(e) => setUsername(e.target.value)} // Memperbarui state
                 >
                   Username
                 </Input>
-                <Input
-                  htmlfor="password"
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="********"
-                >
-                  Password
-                </Input>
-                <Button width="w-full">Login</Button>
+
+                <div className="relative">
+                  <Input
+                    htmlfor="password"
+                    type={showPassword ? "text" : "password"} // Tipe berubah berdasarkan state
+                    name="password"
+                    id="password"
+                    placeholder="********"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  >
+                    Password
+                  </Input>
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)} // Toggle state
+                    className="absolute top-1/2 translate-y-1/2 right-0 flex items-center pr-3 text-gray-500 dark:text-gray-300"
+                  >
+                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
+                </div>
+                {error && <p className="text-red-500 text-sm">{error}</p>}
+                <Button width="w-full" type="submit">
+                  Login
+                </Button>
               </form>
             </div>
           </div>
