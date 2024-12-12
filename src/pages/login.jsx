@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import loginData from "../login.json";
 import Button from "../components/Button";
-// import Input from "../components/Input/Index";
 import Navbar from "../components/Navbar";
 import Input from "../components/Input";
 
