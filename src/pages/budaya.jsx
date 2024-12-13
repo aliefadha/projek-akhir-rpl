@@ -26,7 +26,7 @@ const Budaya = () => {
 
   return (
     <div>
-      <Navbar /> {/* Tetap dirender terlepas dari status loading */}
+      <Navbar />
       <div className="min-h-screen pt-16 pb-4 px-4">
         <h1 className="font-bold text-xl mb-3 text-center">BUDAYA</h1>
         {loading ? (

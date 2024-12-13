@@ -22,3 +22,29 @@ export const getDetailBudaya = (id, callback) => {
       console.log("Error: ", error);
     });
 };
+
+export const updateBudaya = async (id, data) => {
+  try {
+    const response = await axios.post(
+      `https://far-pheasant-36-170f0758shwj.deno.dev/budaya/${id}`,
+      data
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error updating budaya:", error);
+    throw error;
+  }
+};
+
+export const addBudaya = async (data) => {
+  try {
+    const response = await axios.post(
+      "https://far-pheasant-36-170f0758shwj.deno.dev/budaya",
+      data
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error adding budaya:", error);
+    throw error;
+  }
+};

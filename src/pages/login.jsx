@@ -4,12 +4,14 @@ import loginData from "../login.json";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Input from "../components/Input";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false); // State untuk toggle password visibility
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,17 +20,9 @@ const Login = () => {
     if (username === loginData.username && password === loginData.password) {
       alert("Login berhasil!");
       // Redirect ke halaman dashboard admin
-      window.location.href = "/";
-      console.log("Input Username:", username);
-      console.log("Input Password:", password);
-      console.log("Expected Username:", loginData.username);
-      console.log("Expected Password:", loginData.password);
+      navigate("/dashboard");
     } else {
       setError("Username atau password salah.");
-      console.log("Input Username:", username);
-      console.log("Input Password:", password);
-      console.log("Expected Username:", loginData.username);
-      console.log("Expected Password:", loginData.password);
     }
   };
 

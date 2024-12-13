@@ -10,6 +10,9 @@ import DetailBudaya from "./pages/detailBudaya.jsx";
 import NilaiLuhur from "./pages/nilai-luhur.jsx";
 import Login from "./pages/login.jsx";
 import Contact from "./pages/contact-us.jsx";
+import Dashboard from "./pages/dashboard.jsx";
+import EditBudaya from "./pages/editBudaya.jsx";
+import AddBudaya from "./pages/tambahData.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -39,6 +42,18 @@ const routes = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/edit-budaya/:id",
+    element: <EditBudaya />,
+  },
+  {
+    path: "/tambah-budaya",
+    element: <AddBudaya />,
   },
 ]);
 
