@@ -18,6 +18,7 @@ const Login = () => {
 
     // Validasi username dan password
     if (username === loginData.username && password === loginData.password) {
+      localStorage.setItem("user", JSON.stringify({ username, password }));
       alert("Login berhasil!");
       // Redirect ke halaman dashboard admin
       navigate("/dashboard");

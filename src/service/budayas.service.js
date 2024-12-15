@@ -48,3 +48,15 @@ export const addBudaya = async (data) => {
     throw error;
   }
 };
+
+export const deleteBudaya = async (id) => {
+  try {
+    const response = await axios.delete(
+      `https://far-pheasant-36-170f0758shwj.deno.dev/budaya/${id}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error deleting budaya:", error);
+    throw error;
+  }
+};

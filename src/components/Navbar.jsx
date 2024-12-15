@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link as LinkRoute } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State untuk status login
+
+  // Periksa local storage untuk status login
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    setIsLoggedIn(!!user); // Set true jika ada data user di local storage
+  }, []);
   const navLink = [
     {
       id: 1,
@@ -37,6 +44,14 @@ const Navbar = () => {
       path: "/login",
     },
   ];
+
+  if (isLoggedIn) {
+    navLink.push({
+      id: 7,
+      title: "Dashboard",
+      path: "/dashboard",
+    });
+  }
   return (
     <div className="bg-black/70 backdrop-blur fixed top-0 left-0 h-14 w-full text-slate-200 flex items-center justify-between px-8 md:px-16 z-30">
       <LinkRoute

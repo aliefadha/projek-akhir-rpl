@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { getBudayas } from "../service/budayas.service";
+import { getBudayas, deleteBudaya } from "../service/budayas.service";
 import { useNavigate } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
@@ -28,12 +28,40 @@ const Dashboard = () => {
     fetchBudayas();
   }, []);
 
+  const handleDelete = async (id) => {
+    const confirm = window.confirm(
+      "Apakah Anda yakin ingin menghapus data ini?"
+    );
+    if (confirm) {
+      try {
+        await deleteBudaya(id);
+        alert("Data berhasil dihapus!");
+        // Perbarui state dengan memfilter data yang dihapus
+        setBudaya((prevBudaya) => prevBudaya.filter((item) => item.id !== id));
+      } catch (err) {
+        alert(`Terjadi kesalahan: ${err.message}`);
+      }
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user"); // Hapus data user dari localStorage
+    alert("Anda berhasil logout!");
+    navigate("/login"); // Redirect ke halaman login
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <Navbar />
       <h1 className="text-2xl font-bold mb-4 pt-16">Dashboard CRUD</h1>
       <div className="flex justify-between items-center mb-4">
         <LinkButton path="/tambah-budaya">Tambah Data</LinkButton>
+        <button
+          className="bg-red-500 text-white px-4 py-2 rounded"
+          onClick={handleLogout}
+        >
+          Log Out
+        </button>
       </div>
       {loading ? (
         <p className="text-center">Memuat data...</p>
@@ -77,7 +105,10 @@ const Dashboard = () => {
                       >
                         <FaEdit size={15} />
                       </button>
-                      <button className="bg-red-500 text-center flex justify-center items-center hover:bg-red-700 text-white font-bold py-1 px-3 rounded">
+                      <button
+                        onClick={() => handleDelete(id)}
+                        className="bg-red-500 text-center flex justify-center items-center hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
+                      >
                         <MdDeleteForever size={15} />
                       </button>
                     </td>
