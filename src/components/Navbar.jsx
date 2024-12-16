@@ -12,6 +12,8 @@ const Navbar = () => {
     const user = localStorage.getItem("user");
     setIsLoggedIn(!!user); // Set true jika ada data user di local storage
   }, []);
+
+  // Array tautan navigasi, filter berdasarkan status login
   const navLink = [
     {
       id: 1,
@@ -38,20 +40,20 @@ const Navbar = () => {
       title: "Contact Us",
       path: "/contact-us",
     },
-    {
+    // Hanya tampilkan "Admin Login" jika belum login
+    !isLoggedIn && {
       id: 6,
       title: "Admin Login",
       path: "/login",
     },
-  ];
-
-  if (isLoggedIn) {
-    navLink.push({
+    // Tampilkan "Dashboard" jika sudah login
+    isLoggedIn && {
       id: 7,
       title: "Dashboard",
       path: "/dashboard",
-    });
-  }
+    },
+  ].filter(Boolean); // Filter elemen undefined dari array
+
   return (
     <div className="bg-black/70 backdrop-blur fixed top-0 left-0 h-14 w-full text-slate-200 flex items-center justify-between px-8 md:px-16 z-30">
       <LinkRoute
@@ -69,12 +71,6 @@ const Navbar = () => {
             <LinkRoute to={path}>{title}</LinkRoute>
           </p>
         ))}
-        {/* <LinkRoute
-          to="/Login"
-          className="transition-all duration-200 cursor-pointer hover:tracking-wide hover:font-semibold"
-        >
-          Admin Login
-        </LinkRoute> */}
       </div>
 
       <div

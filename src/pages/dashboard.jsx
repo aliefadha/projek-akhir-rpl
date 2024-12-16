@@ -53,7 +53,9 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <Navbar />
-      <h1 className="text-2xl font-bold mb-4 pt-16">Dashboard CRUD</h1>
+      <h1 className="text-2xl font-bold mb-4 pt-16">
+        Dashboard Lentera Minang
+      </h1>
       <div className="flex justify-between items-center mb-4">
         <LinkButton path="/tambah-budaya">Tambah Data</LinkButton>
         <button
