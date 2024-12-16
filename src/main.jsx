@@ -16,12 +16,12 @@ import AddBudaya from "./pages/tambahData.jsx";
 
 const routes = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
     path: "/team",
     element: <Team />,
+  },
+  {
+    path: "/",
+    element: <App />,
   },
   {
     path: "/budayas",
