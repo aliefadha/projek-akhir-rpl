@@ -4,7 +4,7 @@ import "./index.css";
 import "./app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import Team from "./pages/team";
+import Team from "./pages/Team.jsx";
 import Budaya from "./pages/budaya.jsx";
 import DetailBudaya from "./pages/detailBudaya.jsx";
 import NilaiLuhur from "./pages/nilai-luhur.jsx";
