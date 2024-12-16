@@ -64,7 +64,7 @@ const Budaya = () => {
                   </div>
                   <LinkButton
                     path={`/budaya/${id}`}
-                    variant="md:absolute md:bottom-2"
+                    variant="md:absolute md:bottom-4"
                   >
                     Pelajari Selengkapnya
                   </LinkButton>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Button from "../components/Button";
@@ -25,6 +25,7 @@ const Contact = () => {
       <Navbar />
       <div className="flex flex-col items-center gap-4 bg-gray-200 p-6 w-full justify-center min-h-screen">
         <div className="relative w-80">
+          <h1 className="font-bold text-2xl mb-3 text-center">Hubungi Kami</h1>
           <label htmlFor="select" className="block text-sm font-medium mb-2">
             Tipe Feedback
           </label>

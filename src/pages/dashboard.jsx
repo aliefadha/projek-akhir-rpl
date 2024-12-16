@@ -50,6 +50,8 @@ const Dashboard = () => {
     navigate("/login"); // Redirect ke halaman login
   };
 
+  let no = 1;
+
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <Navbar />
@@ -74,7 +76,7 @@ const Dashboard = () => {
           <table className="table-auto w-full border-collapse border border-gray-200 shadow">
             <thead className="bg-gray-200">
               <tr>
-                <th className="border border-gray-300 px-4 py-2">ID</th>
+                <th className="border border-gray-300 px-4 py-2">NO</th>
                 <th className="border border-gray-300 px-4 py-2">Nama</th>
                 <th className="border border-gray-300 px-4 py-2">Deskripsi</th>
                 <th className="border border-gray-300 px-4 py-2">Gambar</th>
@@ -91,9 +93,11 @@ const Dashboard = () => {
                 }) => (
                   <tr key={id} className="bg-white hover:bg-gray-50">
                     <td className="border border-gray-300 px-4 py-2 text-center">
-                      {id}
+                      {no++}
                     </td>
-                    <td className="border border-gray-300 px-4 py-2">{nama}</td>
+                    <td className="border border-gray-300 px-4 py-2">
+                      {nama.substring(0, 20)}...
+                    </td>
                     <td className="border border-gray-300 px-4 py-2">
                       {deskripsi.substring(0, 150)}...
                     </td>
