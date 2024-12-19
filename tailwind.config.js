@@ -8,7 +8,7 @@ export default {
       raleway: ["Raleway", "sans-serif"],
     },
     backgroundImage: {
-      "hero-pattern": "url('img/Hero.png')",
+      "hero-pattern": "url('img/hero.png')",
     },
   },
   plugins: [],
