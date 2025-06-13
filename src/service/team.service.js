@@ -3,7 +3,7 @@ import axios from "axios";
 export const getTeam = async () => {
   try {
     const response = await axios.get(
-      "https://far-pheasant-36-170f0758shwj.deno.dev/anggota"
+      "https://far-pheasant-36-wyds59xng2cs.deno.dev/anggota"
     );
     return response.data; // Mengembalikan data budaya
   } catch (error) {
