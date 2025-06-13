@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Navbar />
       <div
-        className="min-h-dvh flex justify-center items-center bg-hero-pattern bg-cover bg-center"
+        className="min-h-dvh flex justify-center items-center bg-hero-pattern bg-cover bg-center s"
         name="Home"
       >
         <div className="h-dvh w-full bg-black/70 flex flex-col relative justify-center items-center px-8 md:px-16">
